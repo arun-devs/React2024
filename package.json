@@ -1,0 +1,26 @@
+{
+  "name": "react2024",
+  "version": "1.0.0",
+  "description": "My First ReactApp",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arun-devs/React2024.git"
+  },
+  "keywords": [
+    "react",
+    "arun"
+  ],
+  "author": "arun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arun-devs/React2024/issues"
+  },
+  "homepage": "https://github.com/arun-devs/React2024#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
