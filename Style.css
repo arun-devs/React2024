@@ -1,3 +1,25 @@
-#heading{
+/* #heading{
     color:brown;
+} */
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    width:220px;
+}
+.logo-container{
+
+}
+.nav-items > ul{
+    display:flex;
+    padding: 0px 10px;
+    font-size: 35px;
+}
+.nav-items > ul >li{
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
 }
