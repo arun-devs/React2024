@@ -30,13 +30,49 @@ const Header = () => {
              </div>
         </div>);
     };
+     const stylecard={
+        backgroundColor: "#f0f0f0",
+     }
+     const reststyle={
+        width: "100%", 
+        height: "145px",
+        
+     }
+    const RestaurantCard =(props)=>{
+        return(
+        <div className="res-card" style={stylecard}>
+            <img alt="noimg" style={reststyle} src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/y2o8ztrfglggsyghzyxu"/>
+            <h3>{props.resname}</h3>
+            <h4> {props.resitem}</h4>
+            <h4>4.3 Stars</h4>
+            <h5>3in delive5 mry time.!</h5>
+            
+        </div>
+
+        );
+    };
 
 
+const Body=()=>{
+    return (
+<div className="body">
+        <div className="search">Search</div>
+        <div className="rest-container">
+        <RestaurantCard
+        resname="Meghna Foods" resitem="Dosa Masala,South Indian" del="4.3 Stars" tim="3in delive5 mry time.!"/>
+        <RestaurantCard resname="Arun Foods" resitem="BIRIYANI" del="4.3 Stars" tim="3in delive5 mry time.!"/>
+        </div>
+        
+
+    </div>);
+
+};
 
 
 const AppLayout=()=>{
     return ( <div className="app">
         <Header/>
+        <Body/>
     </div>
     ) ;
 };

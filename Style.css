@@ -10,9 +10,9 @@
 .logo{
     width:220px;
 }
-.logo-container{
+/* .logo-container{
 
-}
+} */
 .nav-items > ul{
     display:flex;
     padding: 0px 10px;
@@ -22,4 +22,21 @@
     padding: 10px;
     margin: 10px;
     list-style-type: none;
+}
+.res-card{
+    width: 200px;
+    height: 310px;
+        padding:5px;
+}
+.search{
+    padding: 10PX;
+    
+}
+.res-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.rest-container{
+    display: flex;
+    flex-wrap: wrap;
 }
