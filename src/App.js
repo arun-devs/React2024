@@ -7,6 +7,7 @@ import { Outlet } from "react-router-dom";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
+import RestaurantMenu from "./Components/RestaurantMenu";
   
 
 
@@ -147,6 +148,11 @@ const browserRouter=createBrowserRouter([
       {
         path:"/contact",
         element:<Contact/>,
+        
+      },
+      {
+        path:"/restaurant/:id",
+        element:<RestaurantMenu/>,
         
       },
     ],
