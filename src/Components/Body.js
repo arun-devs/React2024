@@ -2,6 +2,8 @@ import resList from "../utils/mockdata";
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body=()=>{
     const[listofRestaurant,SetListofRestaurant]=useState([]);
@@ -29,6 +31,9 @@ console.log(SetListofRestaurant)
 //     return<Shimmer/>
 // }
 // if (!listofRestaurant) return null;
+
+const onlineStatus=useOnlineStatus();
+if (onlineStatus===false)return<h1>something error occured</h1>;
     return listofRestaurant.length===0?<Shimmer/>:
 (<div className="body">
    
@@ -49,7 +54,9 @@ console.log(SetListofRestaurant)
                 }}>Top Rated Restaurant</button>
         </div>
         <div className="rest-container">
-           {filterRestaurant.map(Restaurant=>(<RestaurantCard key={Restaurant.info.id} resData={Restaurant}/>))}
+           {filterRestaurant.map(Restaurant=>(
+            <Link to={"restaurant/" +Restaurant.info.id}><RestaurantCard  resData={Restaurant}/></Link>
+            ))}
 
 
 

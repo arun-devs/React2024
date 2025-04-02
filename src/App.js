@@ -8,6 +8,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
+
   
 
 
@@ -151,7 +152,7 @@ const browserRouter=createBrowserRouter([
         
       },
       {
-        path:"/restaurant/:id",
+        path:"/restaurant/:resId",
         element:<RestaurantMenu/>,
         
       },
