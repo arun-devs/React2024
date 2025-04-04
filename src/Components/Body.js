@@ -22,7 +22,7 @@ console.log(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaura
 SetListofRestaurant(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 setFilterRestaurant(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 // listofRestaurant(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-console.log(SetListofRestaurant)
+
 
 
 
@@ -37,15 +37,17 @@ if (onlineStatus===false)return<h1>something error occured</h1>;
     return listofRestaurant.length===0?<Shimmer/>:
 (<div className="body">
    
-        <div className="filter">
-        <div className="btn-srch"><input type="text" value={searchRestaurant} onChange={(e)=>{setSearchRestaurant(e.target.value)}}/><button onClick={()=>{
+        <div className="filter flex">
+        <div className="btn-srch m-4 p-4"><input type="text" className="border border-solid border-black" value={searchRestaurant} onChange={(e)=>{setSearchRestaurant(e.target.value)}}/>
+        <button className="px-4 bg-green-400 m-2 rounded-b-lg"
+         onClick={()=>{
             // filterout the restasurant
             const Searchfilteredlist=listofRestaurant.filter((res)=>res.info.name.toLowerCase().includes(searchRestaurant.toLowerCase()));
             console.log(Searchfilteredlist);
             setFilterRestaurant(Searchfilteredlist)
         }}>Search</button></div>
     
-            <button className="filter-btn" 
+            <button className="px-0 py-0 bg-green-400 mx-0 my-9" 
             onClick={()=>{const filteredlist=listofRestaurant.filter(
                 (Restaurant) => Restaurant.info.avgRating>4
             );
@@ -53,9 +55,9 @@ if (onlineStatus===false)return<h1>something error occured</h1>;
                 // console.log(filteredlist);
                 }}>Top Rated Restaurant</button>
         </div>
-        <div className="rest-container">
+        <div className="flex flex-wrap">
            {filterRestaurant.map(Restaurant=>(
-            <Link to={"restaurant/" +Restaurant.info.id}><RestaurantCard  resData={Restaurant}/></Link>
+            <Link to={"restaurant/" +Restaurant.info.id} key={Restaurant.info.id}><RestaurantCard  resData={Restaurant}/></Link>
             ))}
 
 

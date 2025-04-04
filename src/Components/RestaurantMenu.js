@@ -15,7 +15,10 @@ const resinfo=useRestaurantMenu(resId)
     if (resinfo===null) return<Shimmer/>
     const { name,avgRating,costForTwo,cuisines } = resinfo?.cards?.[2]?.card?.card?.info ?? {}; //empty object handled
     // const {itemCards}=resinfo?.cards?.[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards 
+    const menusectionnew=resinfo?.cards?.[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards??{};
+    console.log("menusectionnew:", menusectionnew);
     const menuSection = resinfo?.cards?.[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards ?? [];
+    
 
 const itemlist = menuSection
   .map((card) => card?.card?.card?.itemCards)
