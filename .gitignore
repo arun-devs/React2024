@@ -1,3 +1,5 @@
 /node_modules
 /dist
 .parcel-cache
+/coverage
+# /http://localhost:1234/restaurant/1000677

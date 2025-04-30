@@ -23,7 +23,7 @@ const cartItems=useSelector((store)=>store.cart.items);
                  <li className="px-4"><Link to="/">Home</Link></li>   
                  <li className="px-4"><Link to="/about">AboutUs</Link></li>
                  <li className="px-4"><Link to="/contact">ContactUs</Link></li>
-                 <li className="px-4 font-bold">Cart-({cartItems.length})items</li>
+                 <li className="px-4 font-bold"><Link to="/cart">Cart-({cartItems.length})items</Link></li>
                  <button className="btn-login" 
                  onClick={()=>{
                     btnname==="Login"?setbtnname("Logout"):setbtnname("Login")
